@@ -1,0 +1,95 @@
+{
+  "command": "loopback",
+  "timestamp": "2026-11-04T21:00:11+0800",
+  "port": "/dev/cu.usbserial-1120",
+  "baud": 9600,
+  "address": 0,
+  "info": {
+    "version_raw": "0x38",
+    "usb_enumerated": true,
+    "usb_state_raw": 1,
+    "num_lock": false,
+    "caps_lock": false,
+    "scroll_lock": false
+  },
+  "config": {
+    "work_mode": 0,
+    "work_mode_raw": 128,
+    "serial_mode": 0,
+    "serial_mode_raw": 128,
+    "address": 0,
+    "baudrate": 9600,
+    "packet_interval_ms": 3,
+    "vid_pid_raw": "86 1a 29 e1",
+    "string_flags": 0,
+    "raw": "80 80 00 00 00 25 80 08 00 00 03 86 1a 29 e1 00 00 00 01 00 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+  },
+  "stages": [
+    {
+      "stage": "left_shift_down",
+      "pass": true,
+      "events": [
+        {
+          "page": 7,
+          "usage": 225,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "stage": "left_shift_up",
+      "pass": true,
+      "events": [
+        {
+          "page": 7,
+          "usage": 225,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "stage": "mouse_right",
+      "pass": true,
+      "events": [
+        {
+          "page": 1,
+          "usage": 56,
+          "value": 0
+        },
+        {
+          "page": 1,
+          "usage": 49,
+          "value": 0
+        },
+        {
+          "page": 1,
+          "usage": 48,
+          "value": 8
+        }
+      ]
+    },
+    {
+      "stage": "mouse_left",
+      "pass": true,
+      "events": [
+        {
+          "page": 1,
+          "usage": 56,
+          "value": 0
+        },
+        {
+          "page": 1,
+          "usage": 49,
+          "value": 0
+        },
+        {
+          "page": 1,
+          "usage": 48,
+          "value": -8
+        }
+      ]
+    }
+  ],
+  "hid_delivery": "PASS",
+  "status": "PASS"
+}

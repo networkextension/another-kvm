@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HD33 · Web KVM</title><link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header><a class="brand" href="/" aria-label="KVM 首页"><span class="brand-icon">⌘</span><span>Remote desk<small>HD33 / CH9329</small></span></a><div class="connection"><span id="connectionDot" class="dot"></span><span id="connection">正在连接</span></div><button id="fullscreen" class="quiet">全屏 ↗</button></header>
+<main>
+<section class="workspace">
+<div class="session-heading"><div><h1>另一台 Mac，就在这里。</h1><p id="sessionHint">实时画面与硬件键鼠控制</p></div><button id="claim" class="primary" disabled>接管键鼠</button></div>
+<div id="screen" class="screen">
+<canvas id="display" width="1280" height="720" tabindex="0" aria-label="远端视频，接管后点击画面控制键鼠"></canvas>
+<div id="empty" class="empty"><span class="signal-icon">▣</span><strong id="emptyTitle">等待视频信号</strong><p id="emptyDetail">正在连接 HD33 采集卡…</p></div>
+<div id="controlBadge" class="screen-badge" hidden><span class="dot green"></span>已接管 · 点击画面开始输入</div>
+</div>
+<div class="screen-footer"><span><span class="dot" id="videoDot"></span> <span id="videoStats">HD33 video</span></span><span id="latency">— ms</span><span id="controlState">仅观看</span></div>
+<div id="notice" class="notice" role="status">画面连接后，点击「接管键鼠」开始操作。离开窗口时自动释放。</div>
+</section>
+<aside>
+<section class="tool-section"><h2>控制</h2><label class="field-label" for="mouseMode">鼠标模式</label><select id="mouseMode"><option value="absolute">绝对定位 · 点击即到达</option><option value="relative">相对移动 · 拖动轨迹</option></select><p class="help">绝对定位适合单屏桌面；多屏或位置偏移时切换相对移动。</p><div class="button-grid"><button id="escape">Esc</button><button id="tab">Tab</button><button id="enter">Enter</button><button id="backspace">⌫</button></div><button id="release" class="wide">释放所有按键</button></section>
+<section class="tool-section"><h2>发送文字</h2><label class="sr-only" for="text">英文文字</label><textarea id="text" rows="4" maxlength="500" placeholder="在远端输入英文文字…" spellcheck="false"></textarea><div class="text-footer"><span id="textCount">0 / 500</span><button id="sendText">发送</button></div><p class="help">US 英文布局。保持远端输入框聚焦，不会自动追加回车。</p></section>
+<section class="tool-section"><h2>设备</h2><dl><div><dt>视频</dt><dd id="cameraStatus">连接中</dd></div><div><dt>键鼠</dt><dd id="hidStatus">连接中</dd></div><div><dt>串口</dt><dd id="serialPort">—</dd></div><div><dt>波特率</dt><dd id="baud">—</dd></div></dl><button id="snapshot" class="wide">保存当前画面</button></section>
+<p class="aside-note">HD33 捕获画面<br>CH9329 传递每一次按键</p>
+</aside>
+</main>
+<dialog id="login"><form id="loginForm"><span class="brand-icon">⌘</span><h2>连接远端桌面</h2><p>输入这台 KVM 的访问码</p><label for="password">访问码</label><input id="password" type="password" autocomplete="current-password" required autofocus><p id="loginError" role="alert"></p><button class="primary" type="submit">连接</button></form></dialog>
+<script src="/static/app.js"></script>
+</body></html>

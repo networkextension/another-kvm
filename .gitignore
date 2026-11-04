@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+.DS_Store
+web_kvm/.access-code
+web_kvm/*.log
+web_kvm/Camera.app/
+# Local vendor SDK, third-party documents and unrelated USB inventory.
+CH9329EVT-2022/
+/CH9329*.pdf
+/device_inventory.json

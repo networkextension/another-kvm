@@ -1,0 +1,54 @@
+{
+  "url": "http://192.168.11.99:8080",
+  "timestamp": "2026-11-04T21:23:48+0800",
+  "status": {
+    "video": {
+      "online": true,
+      "camera": "HD33 video",
+      "resolution": "1920x1080",
+      "requested_resolution": "1280x720",
+      "fps": 29.8,
+      "frames": 523,
+      "frame_age_ms": 22,
+      "error": null,
+      "logs": [
+        "Capturing HD33 video 1280x720 at 30.0 fps",
+        "First video frame delivered"
+      ]
+    },
+    "hid": {
+      "online": true,
+      "error": null,
+      "port": "/dev/cu.usbserial-110",
+      "baud": 9600,
+      "info": {
+        "version_raw": "0x38",
+        "usb_enumerated": true,
+        "usb_state_raw": 1,
+        "num_lock": false,
+        "caps_lock": false,
+        "scroll_lock": false
+      },
+      "config": {
+        "work_mode": 0,
+        "work_mode_raw": 128,
+        "serial_mode": 0,
+        "serial_mode_raw": 128,
+        "address": 0,
+        "baudrate": 9600,
+        "packet_interval_ms": 3,
+        "vid_pid_raw": "86 1a 29 e1",
+        "string_flags": 0,
+        "raw": "80 80 00 00 00 25 80 08 00 00 03 86 1a 29 e1 00 00 00 01 00 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+      },
+      "acks": 0
+    },
+    "controller": false,
+    "uptime_seconds": 17
+  },
+  "video_frames_received": 15,
+  "video_seconds": 0.54,
+  "jpeg_bytes_average": 188108,
+  "input_ack_checks": 4,
+  "result": "PASS"
+}
